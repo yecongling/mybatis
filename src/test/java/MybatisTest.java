@@ -1,13 +1,17 @@
 import com.ycl.dao.IUserDao;
 import com.ycl.domain.User;
 import com.ycl.mybatis.io.Resources;
+import com.ycl.mybatis.io.sqlsession.SqlSession;
+import com.ycl.mybatis.io.sqlsession.SqlSessionFactory;
+import com.ycl.mybatis.io.sqlsession.SqlSessionFactoryBuilder;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
 public class MybatisTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // 1、读取配置文件
         InputStream in = Resources.getResourceAsStream("SqlMapConfig.xml");
         // 2、创建SqlSessionFactory工厂
